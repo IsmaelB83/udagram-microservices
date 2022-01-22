@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  ENV: PRO
+  POSTGRES_DATABASE: udagram
+  POSTGRES_HOST: udacity.cuktrz6k04ln.us-east-1.rds.amazonaws.com
+  DIALECT: postgres
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  AWS_MEDIA_BUCKET: udagram-ibernal-dev
+metadata:
+  name: common-config

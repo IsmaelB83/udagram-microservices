@@ -1,11 +1,13 @@
 # udagram (microservices version)
-Instagram type application in the cloud of AWS
+Instagram type application refactored to a microservices architecture with kubernetes. Deployed to AWS EKS service.
 
-The project  has two main parts deployed in different elements of AWS
-* Backend: RESTapi written in typescript/express 
-* Frontend: ionic application served trough an s3 bucket
+The project  has two four microservices:
+* udagram-api-feed: REST api microservice to interact with feeds (a feed is an image with a title)
+* udagram-api-user: REST api microservice to interact with user model (authenticate, create, etc.)
+* udagram-reverseproxy: nginx microservice to reverseproxy requests to the endpoints pods.
+* Frontend: ionic application frontend
 
-In this version of udagram (which is an evolution from original https://github.com/IsmaelB83/udagram.git), the backend is served trough a kubernetes cluster using a microservices architecture. By contrast with first version of udagram, where all the RESTApi was running in the same elastick beanstalk application.
+This version of udagram is an evolution from original https://github.com/IsmaelB83/udagram.git, the backend is served trough a kubernetes cluster using a microservices architecture. By contrast with first version of udagram, where all the REST api was running in the same elastick beanstalk application.
 
 Appart from that, this application makes usage of the following AWS Services:
 * RDS: The database is a postgres instance deployed as an RDS service in AWS.
@@ -18,7 +20,8 @@ Appart from that, this application makes usage of the following AWS Services:
 
 ## ARCHITECTURE
 
-PENDING
+From a high level perspective logical architecture is as shown in below image:
+![AWS_Architecture](screenshots/logical_architecture.png)
 
 ## INSTRUCTIONS TO LOCAL INSTALLATION
 
@@ -97,5 +100,5 @@ Enter in directory frontend, and follow below instructions:
     ```bash
     npx eslint --ext .js,.ts src/ --fix
     ```
-4. To test in local you will need to create an `.env` file, or create env.variables manually. In order to use an .env file you can copy/paste the .env.example file existing in restapi for your reference.
-5. To `build images with .env variables injected` you will need to create them in the settings of repo in travis-ci. And provide them at image build time, trough the  --build-args (see how the docker build command in travis yaml files, as well as the usage of ARG/ENV in the dockerfiles).
+4. To test in local you will need to revie and execute the file `set_env.example.sh`. To persist env variables execute `source set_env.example.sh`.
+5. To `build images with .env variables injected` refer to docker-compose.yaml where it relays on .env variables already existing in local shell. Created trough previouse source command.

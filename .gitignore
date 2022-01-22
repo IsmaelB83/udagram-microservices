@@ -105,3 +105,6 @@ dist
 
 # Env variables
 set_env.sh
+*secret.yaml
+*secret.yam
+*secret.json
