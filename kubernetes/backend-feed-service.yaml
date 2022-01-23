@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: backend-feed-svc
-  name: backend-feed-svc
+    service: backend-feed
+  name: backend-feed
 spec:
   selector:
     service: backend-feed

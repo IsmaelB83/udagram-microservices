@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: backend-user-svc
-  name: backend-user-svc
+    service: backend-user
+  name: backend-user
 spec:
   selector:
-    service: backend-user-svc
+    service: backend-user
   ports:
   - name: "8080"
     port: 8080
