@@ -23,12 +23,12 @@ spec:
         - name: ENV
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: ENV  
         - name: POSTGRES_DATABASE
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: POSTGRES_DATABASE 
         - name: POSTGRES_USERNAME
           valueFrom:
@@ -43,27 +43,27 @@ spec:
         - name: POSTGRES_HOST
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: POSTGRES_HOST 
         - name: DIALECT
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: DIALECT 
         - name: AWS_PROFILE
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: AWS_PROFILE 
         - name: AWS_REGION
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: AWS_REGION
         - name: AWS_MEDIA_BUCKET
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: common-config
               key: AWS_MEDIA_BUCKET
         - name: JWT_SECRET
           valueFrom:
