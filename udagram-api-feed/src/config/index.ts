@@ -2,7 +2,8 @@
 const config = {
     ENV: {
         ENV: process.env.ENV,
-        PORT: process.env.PORT
+        PORT: process.env.PORT,
+        ORIGIN: process.env.ORIGIN || 'http://localhost:8100'
     },
     POSTGRES: {
         USERNAME: process.env.POSTGRES_USERNAME,

@@ -18,12 +18,5 @@ spec:
       - image: ismaelbernal83/udagram-frontend:v2
         name: frontend
         imagePullPolicy: Always
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"
         ports:
         - containerPort: 80

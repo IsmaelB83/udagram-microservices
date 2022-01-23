@@ -1,6 +1,7 @@
 # ENVIRONMENT
 export ENV=TEST
 export PORT=8080
+export ORIGIN=http://a33042d902aab4322871dd1eb0403cfc-503120894.us-east-1.elb.amazonaws.com
 #AWS RDS POSTGRES
 export POSTGRES_USERNAME=postgres_user
 export POSTGRES_PASSWORD=postgres_pass
