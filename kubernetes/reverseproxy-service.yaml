@@ -6,7 +6,7 @@ metadata:
   name: reverseproxy-svc
 spec:
   selector:
-    app: reverseproxy
+    app: backend-reverseproxy
   ports:
   - name: "8080"
     port: 8080

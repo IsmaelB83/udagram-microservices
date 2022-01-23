@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: reverseproxy
-  name: reverseproxy
+    service: backend-reverseproxy
+  name: backend-reverseproxy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reverseproxy
+      app: backend-reverseproxy
   template:
     metadata:
       labels:
-        app: reverseproxy
+        app: backend-reverseproxy
     spec:
       containers:
       - image: ismaelbernal83/udagram-reverseproxy:v1
