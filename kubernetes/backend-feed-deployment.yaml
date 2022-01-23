@@ -26,6 +26,11 @@ spec:
             configMapKeyRef:
               name: common-config
               key: ENV  
+        - name: ORIGIN
+          valueFrom:
+            configMapKeyRef:
+              name: common-config
+              key: ORIGIN  
         - name: POSTGRES_DATABASE
           valueFrom:
             configMapKeyRef:
