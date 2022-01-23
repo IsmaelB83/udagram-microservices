@@ -23,7 +23,7 @@ script:
   - docker tag udagram-api-feed ismaelbernal83/udagram-api-feed:v1
   - docker tag udagram-api-user ismaelbernal83/udagram-api-user:v1
   - docker tag udagram-frontend ismaelbernal83/udagram-frontend:v2
-  - docker tag udagram-reverseproxy ismaelbernal83/udagram-reverseproxy:v2
+  - docker tag udagram-reverseproxy ismaelbernal83/udagram-reverseproxy:v3
 
 # Tasks to perform after the process is successful
 after_success:
@@ -31,4 +31,4 @@ after_success:
   - docker push ismaelbernal83/udagram-api-feed:v1
   - docker push ismaelbernal83/udagram-api-user:v1
   - docker push ismaelbernal83/udagram-frontend:v2
-  - docker push ismaelbernal83/udagram-reverseproxy:v2
+  - docker push ismaelbernal83/udagram-reverseproxy:v3
