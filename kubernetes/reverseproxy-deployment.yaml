@@ -15,7 +15,7 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - image: ismaelbernal83/udagram-reverseproxy
+      - image: ismaelbernal83/udagram-reverseproxy:v1
         name: reverseproxy
         ports:
         - containerPort: 8080

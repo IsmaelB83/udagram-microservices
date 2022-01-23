@@ -15,7 +15,7 @@ spec:
         service: frontend
     spec:
       containers:
-      - image: ismaelbernal83/udagram-frontend
+      - image: ismaelbernal83/udagram-frontend:v1
         name: frontend
         ports:
         - containerPort: 80

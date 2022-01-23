@@ -15,7 +15,7 @@ spec:
         service: backend-user
     spec:
       containers:
-      - image: ismaelbernal83/udagram-api-user
+      - image: ismaelbernal83/udagram-api-user:v1
         name: udagram-api-user
         ports:
         - containerPort: 80
